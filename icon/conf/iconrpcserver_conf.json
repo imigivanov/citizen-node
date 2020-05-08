@@ -1,0 +1,21 @@
+{
+    "log": {
+        "logger": "iconrpcserver",
+        "colorLog": true,
+        "level": "warning",
+        "filePath": "/root/citizen-node/log/iconrpcserver.log",
+        "outputType": "file",
+        "rotate": {
+            "type": "period",
+            "period": "daily",
+            "interval": 1,
+            "backupCount": 10,
+            "maxBytes": 50000000
+        }
+    },
+    "redirectProtocol": "http",
+    "gunicornConfig": {
+        "workers": 1,
+        "graceful_timeout": 0
+    }
+}

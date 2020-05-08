@@ -1,0 +1,13 @@
+{
+    "IISSData": "/root/citizen-node/data/iissdata",
+    "IScoreDB": "/root/citizen-node/data/.iscoredb",
+    "IPCNet": "unix",
+    "IPCAddress": "/tmp/icon-rc.sock",
+    "ClientMode": false,
+    "DBCount": 2,
+    "Monitor": false,
+    "LogFile": "/root/citizen-node/log/mainnet/icon_dex/icon_rc.log",
+    "LogMaxSize": 10,
+    "LogMaxBackups": 10,
+    "FileName": "rc_config.json"
+  }  

@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+
+### Icon Citizen Node #########################################
+  icon:  
+    build: ./icon
+    entrypoint: "/root/citizen-node/entrypoint.sh"
+    # entrypoint: sleep infinity
+    restart: "always"
+    # ports:
+    #   - 127.0.0.1:7100:7100
+    #   - 127.0.0.1:7101:7101
+    #   - 127.0.0.1:9001:9000
+    #   - 127.0.0.1:9101:9100
+      # - 127.0.0.1:15672:15672
+    environment:
+      - FASTEST_START=yes # if not synced yet, download and start from a snapshot
+      - NETWORK_ENV=${NETWORK_ENV}
+      - DEFAULT_PATH=${DEFAULT_PATH}
+      - CONF_PATH=${DEFAULT_PATH}/conf
+      - CERT_PATH=${DEFAULT_PATH}/cert
+      - PRIVATE_KEY_FILENAME=${PRIVATE_KEY_FILENAME}
+      - PRIVATE_PASSWORD=${PRIVATE_PASSWORD}
+      - PRIVATE_KEY_FULLPATH=${DEFAULT_PATH}/${PRIVATE_KEY_FILENAME}
+    volumes:
+      - "./icon/conf:/root/citizen-node/data/conf"
+      - "./.citizen-node:/root/citizen-node/data"
+      - "./icon/entrypoint.sh:/root/citizen-node/entrypoint.sh"
+      - "./icon/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf"
+      - "./.data/rabbitmq:/data/"
