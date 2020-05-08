@@ -1,6 +1,4 @@
-{
-    "IISSData": "/root/citizen-node/data/iissdata",
-    "IScoreDB": "/root/citizen-node/data/.iscoredb",
+{   
     "IPCNet": "unix",
     "IPCAddress": "/tmp/icon-rc.sock",
     "ClientMode": false,
