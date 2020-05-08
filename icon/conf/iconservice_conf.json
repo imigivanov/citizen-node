@@ -13,6 +13,8 @@
       }
     },
     "builtinScoreOwner": "hx677133298ed5319607a321a38169031a8867085c",
+    "scoreRootPath" : "/root/citizen-node/data/.score_data/score",
+    "stateDbRootPath" : "/root/citizen-node/data/.score_data/db",
     "service": {
       "fee": true,
       "audit": true,
